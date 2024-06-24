@@ -1,7 +1,11 @@
 // _ _$&;
-let a = 5.14;
-let b = 6;
-let c = "Harry";
+// let o = {
+//     name: "Nikhil",
+//     "branch name": "Mechanical"
+// }
 
-console.log(a+b)
-console.log(typeof a, typeof c)
+// o.salary = "100crs";
+
+for (let i = 0; i < 10; i++) {
+    console.log(1+i);
+}
