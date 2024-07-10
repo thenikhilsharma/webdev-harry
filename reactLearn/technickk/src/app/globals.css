@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+  color: white;
+}
+
 nav{
   display: flex;
   background-color: black;
@@ -21,6 +29,8 @@ nav ul{
 
 .body{
   background-color : rgba(255,0,182,.15);
+  display: flex;
+  justify-content: center;
 }
 
 footer{
@@ -31,6 +41,22 @@ footer{
   color: white;
   align-items: center;
   height: 50px;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+button{
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: black;
+  border: none;
+  margin: 5px;
+  border-radius: 50px;
 }
 
 /* :root {
