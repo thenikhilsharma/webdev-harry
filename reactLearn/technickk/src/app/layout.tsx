@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
 import Navbar from "../../component/navbar";
 import Footer from "../../component/footer";
-import SessionWrapper from "../../component/sessionWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,13 +21,59 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar/>
-        <div className="body min-h-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]">
-          <SessionWrapper>
-            {children}
-          </SessionWrapper>
+        <div className="body min-h-screen">
+          <div className='container'>
+            <div className="sidebar">
+              <div className="logo-container">
+                <Image className="img" src="/profile.jpg" alt="profile" fill={true}/>
+              </div>
+              <div className="profile-data">
+                <h1>
+                  Nikhil Sharma
+                </h1>
+              </div>
+              <div className="role">
+                <h2>
+                  Web Developer
+                </h2>
+              </div>
+              <hr className="sidebar-hr"></hr>
+              <div className="contacts">
+                <ul>
+                  <li className="contacts-itemholder">
+                    img
+                    <ul>
+                      <li>Email</li>
+                      <li className="contacts-data">nikhilsharmalku@gmai.com</li>
+                    </ul>
+                  </li>
+                  <li className="contacts-itemholder">
+                    img
+                    <ul>
+                      <li>Phone no</li>
+                      <li className="contacts-data">7985788639</li>
+                    </ul>
+                  </li>
+                  <li className="contacts-itemholder">
+                    img
+                    <ul>
+                      <li>LinkedIn</li>
+                      <li className="contacts-data">id</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="main">
+            <Navbar/>
+            <h1 className="heading">About Me</h1>
+            <hr className="header-breaker"></hr>
+            <div className="content">
+              {children}
+            </div>
+            </div>
+          </div>
         </div>
-        <Footer/>
       </body>
     </html>
   );
